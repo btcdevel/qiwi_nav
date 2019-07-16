@@ -20,6 +20,7 @@ jQuery(function() {
 
   $navCloseIcon.on('click', function() {
     $(this).parents('.b-nav__dropdown-block').removeClass('b-nav__dropdown-block_state-active');
+    $navListItem.removeClass('b-nav__li_state-active');
   });
 
 });
