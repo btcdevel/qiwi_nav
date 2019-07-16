@@ -10,7 +10,7 @@
     <title><%=title%></title>
   </head>
   <body>
-    <header>
+    <header class="l-rel">
       <div class="b-container">
         <nav class="b-nav">
           <a href="/" class="b-nav__logo-link">
@@ -30,17 +30,74 @@
             <button class="b-nav__button b-nav__button-create">Создать кошелек</button>
             <button class="b-nav__button b-nav__button-enter">Войти</button>
           </div>
-          <div class="b-nav__dropdown-block" data-dropdown="payments">
-            <div class="b-container">ПЛАТЕЖИ</div>
-          </div>
-          <div class="b-nav__dropdown-block" data-dropdown="cards">
-            <div class="b-container">ПЛАСТИКОВЫЕ КАРТЫ QIWI</div>I
-          </div>
-          <div class="b-nav__dropdown-block" data-dropdown="refill">
-            <div class="b-container">ПОПОЛНИТЬ КОШЕЛЕК</div>I
-          </div>
-          <div class="b-nav__dropdown-block" data-dropdown="help"></div>
-          <div class="b-nav__dropdown-block" data-dropdown="more"></div>
         </nav>
+      </div>
+      <div class="b-nav__dropdown-block" data-dropdown="payments">
+        <div class="b-container">
+          <div class="b-nav__dropdown-wrapper">
+            <div class="b-nav__dropdown-content-block b-nav__dropdown-content-block_75">
+              <h2 class="b-nav__dropdown-content-title">ПЛАТЕЖИ</h2>
+              <div class="b-nav__dropdown-item-block">
+                <a href="#">
+                  <img src="img/header-wallet-icon.svg" />
+                  Переводы между кошельками
+                </a>                <a href="#">
+                  <img src="img/header-card-icon-grey.svg" />
+                  Переводы на карту
+                </a>                <a href="#">
+                  <img src="img/header-phone-icon-grey.svg" />
+                  Мобильная связь
+                </a>                <a href="#">
+                  <img src="img/header-bank-icon.svg" />
+                  Переводы в банк
+                </a>                <a href="#">
+                  <img src="img/header-wifi-icon.svg" />
+                  Интернет
+                </a>                <a href="#">
+                  <img src="img/header-game-icon.svg" />
+                  Игры
+                </a>                <a href="#">
+                  <img src="img/header-entertainment-icon.svg" />
+                  Развлечения
+                </a>                <a href="#">
+                  <img src="img/header-credit-icon.svg" />
+                  Погашения кредитов
+                </a>                <a href="#">
+                  <img src="img/header-other-icon.svg" />
+                  Все категории
+                </a>
+              </div>
+            </div>
+            <div class="b-nav__dropdown-content-block b-nav__dropdown-content-block_25">
+              <h2 class="b-nav__dropdown-content-title">ПЕРЕВОДЫ</h2>
+              <div class="b-nav__dropdown-item-block">
+                <a href="#">
+                  <img src="img/header-card-icon-grey.svg" />
+                  На банковскую карту
+                </a>                <a href="#">
+                  <img src="img/header-send-icon.svg" />
+                  Через системы переводов
+                </a>                <a href="#">
+                  <img src="img/header-qiwi-icon.svg" />
+                  На QIWI Кошелек
+                </a>
+              </div>
+            </div>
+            <svg class="b-nav__dropdown-menu-close" viewBox="0 0 24 24" focusable="false"><path class="payment-menu-close-icon-path-76" d="M12 10.586l6.293-6.293a1 1 0 0 1 1.414 1.414L13.414 12l6.293 6.293a1 1 0 0 1-1.414 1.414L12 13.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L10.586 12 4.293 5.707a1 1 0 0 1 1.414-1.414L12 10.586z"></path></svg>
+          </div>
+        </div>
+      </div>
+      <div class="b-nav__dropdown-block" data-dropdown="cards">
+        <div class="b-container">
+          <div class="b-nav__dropdown-wrapper">
+            <div class="b-nav__dropdown-content-block b-nav__dropdown-content-block_75">
+              <h2 class="b-nav__dropdown-content-title">ПЛАСТИКОВЫЕ КАРТЫ QIW</h2>
+            </div>
+            <div class="b-nav__dropdown-content-block b-nav__dropdown-content-block_25">
+              <h2 class="b-nav__dropdown-content-title">ВИРТУАЛЬНЫЕ КАРТЫ</h2>
+            </div>
+            <svg class="b-nav__dropdown-menu-close" viewBox="0 0 24 24" focusable="false"><path class="payment-menu-close-icon-path-76" d="M12 10.586l6.293-6.293a1 1 0 0 1 1.414 1.414L13.414 12l6.293 6.293a1 1 0 0 1-1.414 1.414L12 13.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L10.586 12 4.293 5.707a1 1 0 0 1 1.414-1.414L12 10.586z"></path></svg>
+          </div>
+        </div>
       </div>
     </header>
