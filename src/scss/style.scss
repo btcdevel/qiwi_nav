@@ -15,18 +15,104 @@ $font-stack: -apple-system, BlinkMacSystemFont, Roboto, "Open Sans", "Helvetica 
 
 body {
   font-family: $font-stack;
-  #logo {
-    width: 10rem;
-  }
   .b-container {
 
     @include desktop-1024 {
-      width: 960px;
+      width: 1180px;
       margin-left: auto;
       margin-right: auto;
     }
-    img {
-      width: 20rem;
+  }
+  .b-nav {
+    height: 80px;
+    display: flex;
+    z-index: 100;
+    position: relative;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    @include desktop-1024 {
+    }
+
+    &__logo-link {
+      cursor: pointer;
+      transition: all 120ms cubic-bezier(0.4, 0.0, 0.2, 1);
+      line-height: 1.31;
+    }
+
+    &__logo {
+      width: 95px;
+      height: 48px;
+      display: inline-block;
+      position: relative;
+      flex-shrink: 0;
+      margin-right: 36px;
+    }
+
+    &__ul {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    &__li {
+      margin-right: 24px;
+      display: flex;
+      @include desktop-1024 {
+        align-items: center;
+        line-height: 80px;
+        cursor: pointer;
+        transition: color 120ms cubic-bezier(0.4, 0.0, 0.2, 1);
+
+        &:hover {
+          color: #FF8C00;
+        }
+      }
+    }
+
+    &__loope {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+
+    &__buttons-block {
+      display: flex;
+    }
+
+    &__button {
+      margin-left: 16px;
+    }
+
+    &__button-create {
+      padding: 0 24px;
+      color: #000;
+      border: 1px solid rgba(0,0,0,0.14);
+      background: #fff;
+      background-clip: padding-box;
+      height: 42px;
+      font-size: 14px;
+      min-width: 100px;
+      border-radius: 21px;
+      transition: .5s all ease-in-out;
+      &:hover {
+        border: 1px solid #000;
+      }
+    }
+
+    &__button-enter {
+      padding: 0 24px;
+      color: #fff;
+      background: #FF8C00;
+      border: 1px solid rgba(0,0,0,0.14);
+      background-clip: padding-box;
+      height: 42px;
+      font-size: 14px;
+      min-width: 100px;
+      border-radius: 21px;
     }
   }
 }
