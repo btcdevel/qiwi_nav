@@ -29,17 +29,35 @@ body {
   }
 
   .b-nav {
-    position: relative;
-    height: 80px;
+
+    height: 64px;
     display: flex;
-    z-index: 100;
-    position: relative;
+    padding: 12px 16px;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
     flex-direction: row;
     justify-content: space-between;
+
+    //
+
     @include desktop-1024 {
+      position: relative;
+      height: 80px;
+      display: flex;
+      z-index: 100;
+      position: relative;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__burger {
+      width: 24px;
+      height: 24px;
+      @include desktop-1024 {
+        display: none;
+      }
     }
 
     &__logo-link {
@@ -49,26 +67,79 @@ body {
     }
 
     &__logo {
-      width: 95px;
-      height: 48px;
-      display: inline-block;
+      width: 80px;
+      height: 40px;
+      margin: 0 auto;
+      display: block;
       position: relative;
-      flex-shrink: 0;
-      margin-right: 36px;
+      @include desktop-1024 {
+        width: 95px;
+        height: 48px;
+        display: inline-block;
+        position: relative;
+        flex-shrink: 0;
+        margin-right: 36px;
+      }
     }
 
     &__ul {
+      position: absolute;
       display: flex;
-      flex-grow: 1;
+      flex-direction: column;
+      width: 320px;
+      top: 0;
+      height: 100vh;
+      left: -375px;
+      transition: all 120ms cubic-bezier(0.4, 0.0, 0.2, 1);
+      box-shadow: 0 2px 20px 0 rgba(0,0,0,0.1);
+      background-color: #fff;
+      @include md-375 {
+        width: 375px;
+      }
+      @include desktop-1024 {
+        position: relative;
+        left: 0;
+        flex-grow: 1;
+        flex-direction: row;
+        justify-content: flex-start;
+        box-shadow: none;
+      }
+
+      &_state-active {
+        left: 0;
+      }
+    }
+
+    &__mobile-ul-header {
+      height: 60px;
+      padding: 12px 16px;
+      margin-bottom: 22px;
+      display: flex;
+      position: relative;
+      align-items: center;
       flex-direction: row;
-      justify-content: flex-start;
+      justify-content: center;
+      @include desktop-1024 {
+        display: none;
+      }
+    }
+
+    &__mobile-menu-close {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      left: 16px;
     }
 
     &__li {
-      margin-right: 24px;
-      display: flex;
+      // display: flex;
+      display: none;
       position: relative;
+      margin-bottom: 27px;
+      left: 16px;
       @include desktop-1024 {
+        margin-bottom: 0;
+        margin-right: 20px;
         align-items: center;
         line-height: 80px;
         cursor: pointer;
@@ -95,6 +166,12 @@ body {
       }
     }
 
+    &__li-mobile {
+      position: relative;
+      margin-bottom: 27px;
+      left: 16px;
+    }
+
     &__loope {
       width: 24px;
       height: 24px;
@@ -110,31 +187,41 @@ body {
     }
 
     &__button-create {
-      padding: 0 24px;
-      color: #000;
-      border: 1px solid rgba(0,0,0,0.14);
-      background: #fff;
-      background-clip: padding-box;
-      height: 42px;
-      font-size: 14px;
-      min-width: 100px;
-      border-radius: 21px;
-      transition: .5s all ease-in-out;
-      &:hover {
-        border: 1px solid #000;
+      display: none;
+      @include desktop-1024 {
+        display: block;
+        padding: 0 24px;
+        color: #000;
+        border: 1px solid rgba(0,0,0,0.14);
+        background: #fff;
+        background-clip: padding-box;
+        height: 42px;
+        font-size: 14px;
+        min-width: 100px;
+        border-radius: 21px;
+        transition: .5s all ease-in-out;
+        &:hover {
+          border: 1px solid #000;
+        }
       }
     }
 
     &__button-enter {
-      padding: 0 24px;
-      color: #fff;
-      background: #FF8C00;
       border: 1px solid rgba(0,0,0,0.14);
-      background-clip: padding-box;
-      height: 42px;
-      font-size: 14px;
-      min-width: 100px;
+      background: #fff;
+      padding: 9px 14px;
+      font-size: 13px;
       border-radius: 21px;
+      background-clip: padding-box;
+      @include desktop-1024 {
+        height: 42px;
+        padding: 0 24px;
+        color: #fff;
+        background: #FF8C00;
+        border: 1px solid rgba(0,0,0,0.14);
+        min-width: 100px;
+        font-size: 14px;
+      }
     }
 
     &__dropdown-block {

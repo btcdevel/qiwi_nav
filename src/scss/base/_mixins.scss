@@ -6,25 +6,25 @@
     }
 }
 
-@mixin desktop_1024 {
+@mixin desktop-1024 {
     @media only screen and(min-width: 1024px) and (max-width: 2560px) {
         @content;
     }
 }
 
-@mixin md_max {
+@mixin md-max {
     @media only screen and(max-width: 768px) {
         @content;
     }
 }
 
-@mixin md_425 {
+@mixin md-425 {
     @media only screen and(max-width: 425px) {
         @content;
     }
 }
 
-@mixin md_375 {
+@mixin md-375 {
     @media only screen and (max-width: 375px) {
         @content;
     }
