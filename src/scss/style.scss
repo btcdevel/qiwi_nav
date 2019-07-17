@@ -98,6 +98,7 @@ body {
       }
       @include desktop-1024 {
         position: relative;
+        height: auto;
         left: 0;
         flex-grow: 1;
         flex-direction: row;
@@ -133,11 +134,12 @@ body {
 
     &__li {
       // display: flex;
-      display: none;
+      // display: none;
       position: relative;
       margin-bottom: 27px;
       left: 16px;
       @include desktop-1024 {
+        display: flex;
         margin-bottom: 0;
         margin-right: 20px;
         align-items: center;
@@ -167,9 +169,12 @@ body {
     }
 
     &__li-mobile {
-      position: relative;
-      margin-bottom: 27px;
-      left: 16px;
+      @include desktop-1024 {
+        display: none;
+        position: relative;
+        margin-bottom: 27px;
+        left: 16px;
+      }
     }
 
     &__loope {
